@@ -28,11 +28,13 @@ int main()
             d += message[i];
             n--;
         }
+
         int data_size = d.size();
         packet.push_back({p_no, data_size, 0, d});
         j = i;
         p_no++;
     }
+
     cout << "-------Generated packet-------" << endl;
     cout << "Packet No.\tPacket size\tflag\t\tData\n";
 

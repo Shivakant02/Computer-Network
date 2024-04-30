@@ -16,7 +16,6 @@ int main()
         cout << "\t " << ch;
     }
     cout << endl;
-
     for (int u = 0; u < V; u++)
     {
         char ch = 'a' + u;
