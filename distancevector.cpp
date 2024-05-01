@@ -51,7 +51,7 @@ int main()
                     int v = it[1];
                     int wt = it[2];
 
-                    if (dis[u] + wt < dis[v])
+                    if (dis[u] != 999 && dis[u] + wt < dis[v])
                     {
                         dis[v] = dis[u] + wt;
                         va[v] = u;
