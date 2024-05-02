@@ -16,7 +16,7 @@ int main()
 {
     cout << "Enter the message\n";
     string m;
-    getline(cin, m);
+    cin >> m;
     long long p, q;
     cout << "Enter the two prime no p and q\n";
     cin >> p >> q;
@@ -38,30 +38,37 @@ int main()
             d = i;
         }
     }
+
     vector<int> encription(m.size());
     cout << "Encripted message is\n";
+
     for (int ch = 0; ch < m.size(); ch++)
     {
         encription[ch] = m[ch] - 96;
         long long msg = encription[ch];
         long long enr_msg = 1;
+
         for (int j = 0; j < e; j++)
         {
             enr_msg = (enr_msg * msg) % n;
         }
+
         enr_msg = enr_msg % n;
         encription[ch] = enr_msg;
         cout << char(encription[ch] + 96);
     }
+
     cout << "\nDecription message is\n";
     for (int ch = 0; ch < m.size(); ch++)
     {
         long long enc_msg = encription[ch];
         long long dec_msg = 1;
+
         for (int i = 0; i < d; i++)
         {
             dec_msg = (dec_msg * enc_msg) % n;
         }
+
         dec_msg = dec_msg % n;
         cout << char(dec_msg + 96);
     }
